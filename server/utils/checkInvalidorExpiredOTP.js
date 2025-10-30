@@ -1,0 +1,1 @@
+export const checkInvalidOrExpiredOTP = (user, otp) => {  return (    user.verificationCode !== otp || user.verificationCodeExpired < Date.now()  );};
