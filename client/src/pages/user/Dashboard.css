@@ -1,0 +1,224 @@
+.dashboard-container-v2 {
+  display: flex;
+  background-color: #f8f9fa; 
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif; 
+}
+.main-content-v2 {
+  flex-grow: 1;
+  padding: 2rem 2.5rem; 
+  overflow-y: auto;
+}
+.header-v2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.header-greeting h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.25rem;
+}
+.header-greeting p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+}
+.header-datetime {
+  text-align: right;
+}
+.header-datetime p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+.header-datetime h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.stat-card-v2 {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 12px; 
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.stat-card-v2:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+.stat-icon-wrapper {
+  font-size: 1.75rem; 
+  margin-right: 1rem;
+  color: #374151;
+  opacity: 0.8;
+}
+.stat-info .stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+}
+.stat-info .stat-label {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.full-width-chart {
+  grid-column: 1 / -1; 
+}
+.chart-container {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.chart-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #374151;
+}
+.recent-activity-section {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.recent-activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.recent-activity-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #374151;
+}
+.view-all-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+.view-all-link:hover {
+  text-decoration: underline;
+}
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+.activity-item:last-child {
+  border-bottom: none;
+}
+.activity-details .activity-book-title {
+  display: block;
+  font-weight: 500;
+  color: #111827;
+}
+.activity-details .activity-member-name {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+.activity-date {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .main-content-v2 {
+    padding: 1.5rem;
+  }
+  .header-v2 h1 {
+    font-size: 1.75rem;
+  }
+}
+.pagination-page-button:not(.active):hover {
+  background-color: #f9fafb;
+}
+
+@media (max-width: 900px) {
+  .main-content-v2 {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-v2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .header-datetime {
+    text-align: left;
+  }
+
+  .header-datetime h3 {
+    font-size: 1.25rem;
+  }
+
+  .stats-grid,
+  .charts-grid {
+    gap: 1rem;
+  }
+
+  .activity-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content-v2 {
+    padding: 1rem;
+  }
+  .header-greeting h1 {
+    font-size: 1.5rem;
+  }
+
+  .stat-card-v2 {
+    padding: 1rem;
+  }
+
+  .stat-info .stat-value {
+    font-size: 1.75rem;
+  }
+
+  .chart-container,
+  .recent-activity-section {
+    padding: 1rem;
+  }
+
+  .chart-title,
+  .recent-activity-title {
+    font-size: 1.1rem;
+  }
+}

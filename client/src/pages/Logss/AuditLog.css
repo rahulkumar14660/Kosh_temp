@@ -1,0 +1,161 @@
+
+
+.log-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.log-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 16px 32px;
+  border-bottom: 1px solid #333;
+}
+
+.log-title {
+  font-size: 20px;
+  color: #6efeff;
+  letter-spacing: 1px;
+}
+
+.home-link {
+  color: #000000;
+  background-color: #6efeff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.home-link:hover {
+  background-color: #44e4ff;
+}
+
+.log-content {
+  flex-grow: 1;
+  padding: 24px;
+  overflow-y: auto;
+  background-color: #1e1e1e;
+}
+
+.log-loading,
+.log-empty {
+  color: #999;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 18px;
+}
+
+.log-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-bottom: 30px;
+}
+
+.log-entry {
+  background-color: #2b2b2b;
+  padding: 16px;
+  border-radius: 6px;
+  border-left: 4px solid #6efeff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #ccc;
+  border-bottom: 1px solid #3b3b3b;
+  padding-bottom: 4px;
+}
+
+.log-time {
+  display: flex;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.log-date {
+  color: #6efeff;
+  font-weight: bold;
+}
+
+.log-clock {
+  color: #bfbfbf;
+  font-style: italic;
+}
+
+
+.log-user {
+  color: #ffd479;
+}
+
+.log-body {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.log-label {
+  font-weight: bold;
+  color: #aaa;
+  min-width: 60px;
+}
+
+.log-value {
+  flex: 1;
+  color: #eee;
+}
+
+.log-action {
+  color: #00e676;
+}
+
+.log-target {
+  color: #ff6b81;
+}
+
+.log-divider {
+  margin-top: 8px;
+  border-top: 1px dashed #444;
+}
+
+
+.log-pagination {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+}
+
+.log-pagination button {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #444;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.log-pagination button:hover:not(:disabled) {
+  background-color: #444;
+}
+
+.log-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.log-pagination span {
+  color: #aaa;
+}

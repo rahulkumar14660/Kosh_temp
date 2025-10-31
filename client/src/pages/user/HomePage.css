@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  filter: blur(80px);
+}
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  background-color: #8b5cf6;
+  top: -150px;
+  left: -150px;
+}
+.shape-2 {
+  width: 500px;
+  height: 500px;
+  background-color: #34d399;
+  bottom: -200px;
+  right: -200px;
+}
+.shape-3 {
+  width: 300px;
+  height: 300px;
+  background-color: #6366f1;
+  bottom: 10%;
+  left: 20%;
+}
+.home-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+  overflow: hidden;
+
+}
+
+.logout-container {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #ff6b6b, #ff5252);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.logout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(135deg, #ff5252, #ff3d3d);
+}
+
+.logout-icon {
+  font-size: 1.2rem;
+}
+
+.homepage-main-content {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.homepage-header {
+  margin-bottom: 4rem;
+}
+
+.homepage-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.user-name-gradient {
+  background: linear-gradient(135deg, #6366f1, #10b981);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.homepage-header p {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.system-selection-container {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.system-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 320px;
+  height: 220px;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.system-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 30px -10px rgba(0, 0, 0, 0.2);
+}
+
+.card-bg-icon {
+  position: absolute;
+  font-size: 120px;
+  color: rgba(255, 255, 255, 0.1);
+  right: -20px;
+  bottom: -20px;
+  transition: transform 0.4s ease-out;
+}
+
+.system-card:hover .card-bg-icon {
+  transform: rotate(-15deg) scale(1.1);
+}
+
+.system-card h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  z-index: 1;
+}
+
+.system-card p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  z-index: 1;
+  line-height: 1.5;
+}
+
+.library-card {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.asset-card {
+  background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+.employee-card {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+}
+
+.card-arrow {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.audit-logs-card {
+  background: linear-gradient(135deg, #e07575, #ff5252);
+}
+.system-card:hover .card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

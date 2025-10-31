@@ -1,0 +1,228 @@
+#root {
+  height: 100vh;
+}
+.register-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #f1f4f9, #dff1ff);
+  flex-direction: row;
+}
+.register-left,
+.register-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.register-left {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.register-right {
+  background: rgba(0, 38, 252, 0.4);
+  color: white;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  backdrop-filter: blur(18px);
+  box-shadow: inset 10px 0 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+}
+.register-logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.register-tagline {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+.register-navlink {
+  margin-top: 1rem;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.95rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.register-navlink:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+.register-static-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInDown 0.6s ease-out;
+}
+.register-heading {
+  font-family: 'Quicksand', 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2f3c7e;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(47, 60, 126, 0.1);
+}
+.register-message {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #555e94;
+  margin-top: 0.4rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 340px;
+  padding: 1.8rem 0rem;
+  border-radius: 28px;
+  font-family: 'Comic Neue', 'Poppins', sans-serif;
+  animation: softBounce 0.6s ease-out;
+  transition: transform 0.3s ease;
+}
+.register-form:hover {
+  transform: translateY(-3px);
+}
+.register-input {
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(63, 81, 181, 0.06);
+  transition: all 0.2s ease;
+}
+.register-input:focus {
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.2);
+  outline: none;
+}
+.register-button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #5c6bc0, #3f51b5);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(63, 81, 181, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.wait{
+  background: linear-gradient(90deg, #9fa8da, #7986cb);
+}
+.register-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(63, 81, 181, 0.3);
+}
+.register-password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.loader{
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+.register-password-wrapper .register-input {
+  width: 100%;
+  padding-right: 3rem;
+}
+.register-toggle-password {
+  position: absolute;
+  right: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #3f51b5;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.3rem;
+  transition: color 0.3s ease;
+}
+.register-toggle-password:hover {
+  color: #303f9f;
+}
+@keyframes softBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+  }
+  .register-left,
+  .register-right {
+    width: 100%;
+    border-radius: 0;
+    padding: 1.5rem 1.5rem;
+  }
+  .register-logo {
+    font-size: 1.5rem;
+  }
+  .register-tagline{
+    font-size: 1rem;
+  }
+  .register-heading {
+    font-size: 1.8rem;
+  }
+  .register-form {
+    max-width: 100%;
+    padding: 1.5rem 0;
+  }
+  .register-navlink {
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .register-logo {
+    font-size: 1.6rem;
+  }
+  .register-tagline {
+    font-size: 1rem;
+  }
+  .register-heading {
+    font-size: 1.6rem;
+  }
+  .register-message {
+    font-size: 0.9rem;
+  }
+  .register-button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}

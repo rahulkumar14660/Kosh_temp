@@ -1,0 +1,146 @@
+.user-profile-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+.user-profile-main {
+  flex-grow: 1;
+  padding: 2rem 3rem;
+}
+.profile-header {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+.back-button {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: #f0f2f5;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #4a5568;
+  transition: background-color 0.2s, color 0.2s;
+}
+.back-button:hover {
+  background-color: #e2e8f0;
+  color: #1a202c;
+}
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #4299e1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+.profile-info h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.5rem;
+  color: #1a202c;
+}
+.role-tag {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.role-tag.admin {
+  background-color: #e6fffa;
+  color: #2c7a7b;
+}
+.role-tag.user {
+  background-color: #ebf4ff;
+  color: #3182ce;
+}
+.profile-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+}
+.detail-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+.detail-card h4 {
+  margin: 0;
+  padding-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.detail-card.full-width {
+  grid-column: 1 / -1;
+}
+.detail-card .card-content {
+  flex-grow: 1;
+  padding: 1.5rem 0 0.5rem 0;
+}
+.detail-card p {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0 0 0.75rem 0;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+}
+.detail-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  width: 180px;
+  flex-shrink: 0;
+}
+.detail-value {
+  flex-grow: 1;
+  word-break: break-word;
+}
+.status-verified,
+.status-not-verified {
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+}
+.status-verified {
+  color: #2f855a;
+  background-color: #c6f6d5;
+}
+.status-not-verified {
+  color: #c53030;
+  background-color: #fed7d7;
+}
+.error-container {
+  color: #dc3545;
+  font-size: 1.2rem;
+  padding: 1rem;
+  background-color: #ffe5e5;
+  border-radius: 8px;
+}

@@ -1,0 +1,132 @@
+.asset-dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+.asset-home-container {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+}
+.asset-home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+.header-greeting h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #1a202c;
+}
+.header-greeting p {
+  margin: 0;
+  font-size: 1rem;
+  color: #718096;
+}
+.header-datetime {
+  text-align: right;
+}
+.header-datetime p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+.header-datetime h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #2d3748;
+}
+.asset-home-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  flex-grow: 1;
+}
+.asset-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1.5rem;
+}
+.stat-card-large {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.stat-card-large:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.stat-card-large-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.75rem;
+}
+.stat-card-large-info p {
+  margin: 0;
+  color: #718096;
+  font-size: 1rem;
+}
+.stat-card-large-info h3 {
+  margin: 0;
+  font-size: 2.25rem;
+  color: #1a202c;
+}
+.total-assets-card {
+  grid-column: 1 / -1; 
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+}
+.asset-chart-container {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+.asset-chart-container h3 {
+  margin: 0 0 1rem 0;
+  text-align: center;
+  color: #2d3748;
+  font-size: 1.25rem;
+}
+.chart-wrapper {
+  position: relative;
+  flex-grow: 1;
+  min-height: 300px; 
+}
+@media (max-width: 1200px) {
+  .asset-home-content {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .asset-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .asset-home-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .header-datetime {
+    text-align: left;
+  }
+}
